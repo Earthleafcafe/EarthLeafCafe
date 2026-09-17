@@ -1,0 +1,15 @@
+/* OrderBand — the "Order ahead" WhatsApp CTA band. */
+:root {
+  --order-band-bg: var(--forest-dark);
+  /*
+   * Gap caught while building phase 5, not phase 1: `.order-inner p` is
+   * part of the source's big dark-mode text-color convergence group
+   * (~9 different light values all becoming #b8c4ba in dark) that
+   * phase 1's audit missed for this specific selector. Light value
+   * here is its own literal (#dbe8de), not var(--text-body) — order-band
+   * always has a dark green background regardless of theme, so its
+   * light-mode text needs to be lighter than the page's normal
+   * muted-text color.
+   */
+  --order-band-text: #dbe8de;
+}

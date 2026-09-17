@@ -1,0 +1,7 @@
+/* Layout — page-level chrome: body background, heading color, skip link. */
+:root {
+  --body-bg: var(--white);
+  --heading-color: var(--forest-dark); /* h1, h2, h3, .brand-name, .floating-card strong */
+  --skip-link-bg: #fff;
+  --skip-link-color: var(--ink);
+}

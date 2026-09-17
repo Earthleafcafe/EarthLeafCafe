@@ -1,0 +1,33 @@
+/*
+ * Palette — the site's base color/shadow vocabulary. Consumed by nearly
+ * every component; ported verbatim from earthleaf.lk/css/styles.css :root.
+ */
+:root {
+  --ink: #193c2b;
+  --forest: #245b37;
+  --forest-dark: #173f2a;
+  --leaf: #4f8a4e;
+  --sage: #dfe9d9;
+  --cream: #f7f4e9;
+  --cream-2: #eef3e7;
+  --white: #fffdf8;
+  --muted: #5f6e63;
+  --line: #dbe3d7;
+  --shadow: 0 20px 50px rgba(36, 91, 55, 0.12);
+  --radius: 26px;
+
+  --border-subtle: rgba(25, 60, 43, 0.08);
+  --text-body: var(--muted);
+
+  /*
+   * Dark-only utility shadow — the source adds this as an *extra*
+   * box-shadow only in html.theme-dark, on several otherwise-unrelated
+   * elements (visit-card, callout, the pill switches). Resolving to
+   * `none` in light means a component can consume it unconditionally —
+   * no `html[data-theme='dark']` override needed. Where a component
+   * also needs a *light* value it must not use this token; it gets its
+   * own full-value-per-theme token instead (see --nav-popover-shadow
+   * and --hero-photo-filter).
+   */
+  --shadow-elevated: none;
+}

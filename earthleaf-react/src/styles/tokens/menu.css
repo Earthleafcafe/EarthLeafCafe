@@ -1,0 +1,7 @@
+/* Menu — "What we serve" section band + menu cards. */
+:root {
+  --section-soft-bg: var(--cream);
+  --menu-card-bg: #fff;
+  --menu-card-strong-color: var(--ink);
+  --menu-icon-bg: var(--cream-2);
+}

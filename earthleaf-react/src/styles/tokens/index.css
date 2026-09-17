@@ -1,0 +1,38 @@
+/*
+ * Barrel: pulls in every token file so main.tsx only needs one import.
+ * Order doesn't affect correctness (each file targets a different
+ * selector — :root or html[data-theme='dark'] — and custom properties
+ * resolve lazily), grouped here light-then-dark, roughly outside-in
+ * through the page (chrome, header, buttons, then each section in
+ * document order, then footer/switches/lightbox).
+ *
+ * Menu and lightbox tokens are still here but now serve /menu and
+ * /events rather than the homepage — see pages/.
+ */
+@import './palette.css';
+@import './palette.dark.css';
+@import './typography.css';
+@import './layout.css';
+@import './layout.dark.css';
+@import './header.css';
+@import './header.dark.css';
+@import './buttons.css';
+@import './buttons.dark.css';
+@import './hero.css';
+@import './hero.dark.css';
+@import './gallery.css';
+@import './gallery.dark.css';
+@import './badges.css';
+@import './badges.dark.css';
+@import './menu.css';
+@import './menu.dark.css';
+@import './order-band.css';
+@import './order-band.dark.css';
+@import './visit.css';
+@import './visit.dark.css';
+@import './footer.css';
+@import './footer.dark.css';
+@import './switches.css';
+@import './switches.dark.css';
+@import './lightbox.css';
+@import './lightbox.dark.css';

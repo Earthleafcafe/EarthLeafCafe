@@ -1,0 +1,18 @@
+.sectionHead {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* See the "prose-paragraph convention" note in styles/locale/typography.css. */
+.sub {
+  font-size: calc(17px * var(--text-scale));
+  line-height: 1.7;
+  color: var(--text-body);
+  margin: 0;
+}

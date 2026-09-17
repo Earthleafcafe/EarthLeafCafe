@@ -1,0 +1,9 @@
+html[data-theme='dark'] {
+  --body-bg:
+    radial-gradient(circle at top left, rgba(101, 131, 95, 0.14), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(63, 101, 74, 0.12), transparent 26%),
+    linear-gradient(115deg, #0a0f0d 0%, #111915 56%, #0d1411 100%);
+  --heading-color: #eef4ea;
+  --skip-link-bg: #121a15;
+  --skip-link-color: #fff;
+}

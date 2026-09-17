@@ -1,0 +1,90 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 12px;
+}
+
+.categoryHead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.menuIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--menu-icon-bg);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.categoryHead h3 {
+  font-size: calc(26px * var(--text-scale));
+}
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.itemCardPhoto {
+  margin: 0;
+  background: var(--menu-card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(36, 91, 55, 0.08);
+}
+
+.itemCardPhotoImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.itemCardPhoto figcaption {
+  padding: 14px 16px;
+  color: var(--text-body);
+  font-size: calc(16px * var(--text-scale));
+}
+
+.itemCardText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 96px;
+  padding: 16px;
+  background: var(--menu-card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  color: var(--text-body);
+  font-size: calc(16px * var(--text-scale));
+}
+
+.itemCardPhoto strong,
+.itemCardText strong {
+  color: var(--menu-card-strong-color);
+}
+
+.menuPrice {
+  font-weight: normal;
+}
+
+@media (max-width: 640px) {
+  .itemGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+
+  .categories {
+    gap: 36px;
+  }
+}

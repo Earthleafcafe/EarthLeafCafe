@@ -1,0 +1,19 @@
+.inner {
+  max-width: 560px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.inner h1 {
+  margin: 0 0 4px;
+}
+
+.inner p {
+  font-size: calc(17px * var(--text-scale));
+  line-height: 1.7;
+  color: var(--text-body);
+  margin: 0 0 20px;
+}

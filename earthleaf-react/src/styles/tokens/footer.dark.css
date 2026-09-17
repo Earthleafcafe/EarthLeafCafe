@@ -1,0 +1,6 @@
+html[data-theme='dark'] {
+  --site-footer-bg: #0d1410;
+  --footer-brand-strong-color: #eef4ea;
+  --footer-text-soft: #c4d0c5;
+  --footer-link-color: #c4d0c5;
+}

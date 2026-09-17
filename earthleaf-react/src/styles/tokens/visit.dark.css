@@ -1,0 +1,6 @@
+html[data-theme='dark'] {
+  --visit-card-bg: rgba(18, 26, 21, 0.96);
+  --visit-card-link-color: #eef6eb;
+  --callout-bg: linear-gradient(110deg, #111b16, #18271e);
+  --callout-border: var(--line);
+}

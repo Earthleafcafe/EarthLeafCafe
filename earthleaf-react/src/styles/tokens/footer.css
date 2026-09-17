@@ -1,0 +1,7 @@
+/* Footer — .site-footer text hierarchy (background is --site-footer-bg). */
+:root {
+  --site-footer-bg: var(--forest-dark);
+  --footer-brand-strong-color: #fff;
+  --footer-text-soft: #bfd0c4; /* .footer-brand span, .footer-meta p */
+  --footer-link-color: #dbe8de; /* .footer-links a, .footer-meta a */
+}

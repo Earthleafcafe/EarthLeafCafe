@@ -1,0 +1,9 @@
+html[data-theme='dark'] {
+  --eyebrow-light-color: var(--leaf);
+  --hero-bg: linear-gradient(115deg, #0b1110 0%, #111915 56%, #0d1612 100%);
+  --chip-bg: rgba(16, 24, 19, 0.92);
+  --chip-border: var(--line);
+  --chip-color: #d5e4d3;
+  --floating-card-bg: rgba(16, 24, 19, 0.94);
+  --hero-photo-filter: brightness(0.92) saturate(1.02);
+}

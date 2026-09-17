@@ -1,0 +1,7 @@
+html[data-theme='dark'] {
+  --pill-switch-bg: rgba(16, 24, 19, 0.92);
+  --pill-switch-active-bg: rgba(176, 223, 166, 0.16);
+  --pill-switch-link-color: #dbe9d8;
+  --pill-switch-link-hover-bg: rgba(223, 233, 217, 0.08);
+  --pill-switch-link-hover-color: #fff;
+}

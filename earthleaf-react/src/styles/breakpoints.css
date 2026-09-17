@@ -1,0 +1,28 @@
+/*
+ * Breakpoints — reference only. CSS custom properties cannot be used
+ * inside a media query condition, so this file documents the
+ * convention instead of defining anything injectable
+ * (docs/REACT-MIGRATION-PLAN.md §12.2 in earthleaf.lk):
+ *
+ *   max-width: 980px   "to tablet" — mobile nav takes over, every
+ *                       multi-column grid collapses to one column
+ *
+ *   max-width: 640px    "to phone" — small-phone type scale and
+ *                        tighter spacing
+ *
+ * RULE: only these two literal values ever appear in a @media query
+ * anywhere in this codebase. A third breakpoint needs a reason written
+ * down next to it.
+ *
+ * Media queries live at the bottom of the component's own
+ * `Component.module.css` — never in a global responsive file. See
+ * docs/RESPONSIVE-INVENTORY.md for the full source-to-component map:
+ * every rule from earthleaf.lk/css/styles.css's two @media blocks,
+ * with the component that now owns it.
+ *
+ * The one exception: --header-height (styles/tokens/header.css) has
+ * its own mobile override, because Header and Nav both need to read
+ * the *same* value rather than each hardcoding it — that was the
+ * source's `top:74px` / `min-height:74px` pair silently agreeing by
+ * coincidence.
+ */

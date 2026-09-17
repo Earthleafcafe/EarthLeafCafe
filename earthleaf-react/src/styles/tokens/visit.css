@@ -1,0 +1,7 @@
+/* Visit — location/hours/contact cards + the "get in touch" callout. */
+:root {
+  --visit-card-bg: var(--cream);
+  --visit-card-link-color: var(--forest);
+  --callout-bg: linear-gradient(110deg, #eef3e7, #f8f4e8);
+  --callout-border: #dfe7d9;
+}

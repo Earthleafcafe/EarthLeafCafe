@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <!--
+      Anti-FOUC theme script. This is the ONE script allowed to run outside
+      React — it must apply the saved theme before first paint, which is
+      earlier than React's render. Ported from the static site's <head>
+      IIFE (see docs/REACT-MIGRATION-PLAN.md §6.1 in earthleaf.lk):
+        - writes `data-theme` instead of the old `.theme-dark` class,
+          matching the attribute-selector token strategy (plan §3.3)
+        - the old sessionStorage "pending scroll" restore is intentionally
+          NOT ported: it only existed because switching language used to
+          be a full page navigation, which React's router makes obsolete.
+    -->
+    <script>
+      (() => {
+        try {
+          var themeKey = 'earthleaf:theme';
+          var storedTheme = localStorage.getItem(themeKey);
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.documentElement.dataset.theme = 'dark';
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/png" href="%BASE_URL%assets/earthleaf-favicon.png" />
+    <title>Earth Leaf | Healthy Lunch in Ratmalana</title>
+    <meta
+      name="description"
+      content="Earth Leaf (Ratmalana) — healthy Sri Lankan lunch bowls made fresh with no artificial ingredients and no added sugar."
+    />
+    <!--
+      Static font links (not per-route, so not worth moving into
+      react-helmet-async). Ported as-is from the static site.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
+  </body>
+</html>

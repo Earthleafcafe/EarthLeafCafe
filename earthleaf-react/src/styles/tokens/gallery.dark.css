@@ -1,0 +1,5 @@
+html[data-theme='dark'] {
+  --gallery-photo-filter: brightness(0.92) saturate(1.02);
+  /* Same as the resting value on purpose — see gallery.css. */
+  --gallery-photo-filter-hover: brightness(0.92) saturate(1.02);
+}

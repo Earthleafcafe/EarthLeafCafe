@@ -1,0 +1,33 @@
+/* Base element styles, ported from earthleaf.lk/css/styles.css `body`/`a`/`img`/`button` rules. */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--body-bg);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+ * Scroll lock for the lightbox (plan §6.3). Replaces the source's direct
+ * `document.body.style.overflow = 'hidden'` mutation — that was inline
+ * CSS from JS and could clobber another scroll lock. useLockBodyScroll()
+ * toggles this attribute instead.
+ */
+body[data-scroll-locked='true'] {
+  overflow: hidden;
+}

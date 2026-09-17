@@ -1,0 +1,10 @@
+/* Buttons — .btn-outline / .btn-light variants (the Button component). */
+:root {
+  --btn-outline-color: var(--forest);
+  --btn-outline-border: #91a88f;
+  --btn-outline-hover-bg: var(--cream-2);
+  --btn-outline-hover-color: var(--forest-dark);
+  --btn-light-bg: #fff;
+  --btn-light-color: var(--forest-dark);
+  --btn-light-hover-bg: var(--cream);
+}

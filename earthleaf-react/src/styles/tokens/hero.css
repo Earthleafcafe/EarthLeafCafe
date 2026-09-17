@@ -1,0 +1,12 @@
+/* Hero — hero band background, chips, floating card, light-tone eyebrow. */
+:root {
+  --eyebrow-light-color: #d9e9d4; /* .eyebrow.light, used on dark section backgrounds */
+  --hero-bg: linear-gradient(115deg, #fffdf8 0%, #f5f6e8 56%, #edf3df 100%);
+  --chip-bg: rgba(255, 255, 255, 0.82);
+  --chip-border: #d9e2d2;
+  --chip-color: #496454;
+  /* Locale axis, not theme: redefined in styles/locale/typography.css. */
+  --chip-font-size: 12px;
+  --floating-card-bg: rgba(255, 253, 248, 0.95);
+  --hero-photo-filter: brightness(1.06) saturate(0.98);
+}

@@ -1,0 +1,34 @@
+/* Header — site-header bar, Nav popover, NavToggle, brand logo plate. */
+:root {
+  --header-bg: rgba(255, 253, 248, 0.94);
+  --nav-popover-bg: #fff; /* mobile nav popover */
+  --nav-link-color: #365342;
+  --nav-link-hover-bg: var(--cream-2);
+  --nav-link-hover-color: var(--forest-dark);
+  --nav-toggle-bg: #fff;
+  --nav-toggle-bar: var(--forest-dark);
+  /* Shared with Footer's .footer-brand img — same plate behind both logos. */
+  --logo-plate-bg: #fff;
+
+  /*
+   * Header.module.css sets min-height to this; Nav.module.css sets its
+   * mobile popover's `top` to it. One token instead of the source's
+   * two hardcoded 74px/86px pairs that had to agree by hand
+   * (docs/REACT-MIGRATION-PLAN.md §12.2 in earthleaf.lk). Also what
+   * phase 14's scroll-padding-top reads.
+   */
+  --header-height: 86px;
+
+  /*
+   * The mobile nav popover's shadow. A full value per theme rather than
+   * `--shadow` plus a dark-only `--shadow-elevated` override, so
+   * Nav.module.css needs no `html[data-theme='dark']` block.
+   */
+  --nav-popover-shadow: var(--shadow);
+}
+
+@media (max-width: 980px) {
+  :root {
+    --header-height: 74px;
+  }
+}

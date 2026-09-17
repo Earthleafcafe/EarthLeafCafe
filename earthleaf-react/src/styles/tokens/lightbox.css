@@ -1,0 +1,6 @@
+/* Lightbox — the Gallery photo viewer overlay. */
+:root {
+  --lightbox-scrim: rgba(9, 25, 16, 0.84);
+  --lightbox-close-bg: rgba(255, 255, 255, 0.12);
+  --lightbox-close-border: rgba(255, 255, 255, 0.25);
+}

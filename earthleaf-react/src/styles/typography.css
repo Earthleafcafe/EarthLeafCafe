@@ -1,0 +1,36 @@
+/*
+ * Base h1/h2/h3 scale, ported from earthleaf.lk/css/styles.css. Font
+ * sizes are wrapped in calc(… * var(--text-scale)) so the Sinhala
+ * overrides in styles/locale/typography.css apply automatically — no
+ * separate `.lang-si h1/h2/h3` rules needed (plan §3.2).
+ */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: calc(clamp(44px, 5.4vw, 76px) * var(--text-scale));
+  line-height: var(--h1-line-height);
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+}
+
+h1 span {
+  color: var(--leaf);
+}
+
+h2 {
+  font-size: calc(clamp(34px, 4vw, 52px) * var(--text-scale));
+  line-height: var(--h2-line-height);
+  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: calc(22px * var(--text-scale));
+  line-height: var(--h3-line-height);
+  margin: 0 0 10px;
+}

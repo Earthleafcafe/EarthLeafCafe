@@ -1,0 +1,77 @@
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/*
+ * min-height reads --header-height directly, so it's already 74px under
+ * 980px via that token's own media query (styles/tokens/header.css) —
+ * no need to repeat the breakpoint here too.
+ */
+.headerInner {
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 240px;
+}
+
+.brandLogo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--logo-plate-bg);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--heading-color);
+}
+
+.brandSub {
+  font-size: 12px;
+  color: var(--text-body);
+  margin-top: 4px;
+}
+
+@media (max-width: 980px) {
+  .brand {
+    min-width: auto;
+  }
+
+  .brandLogo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brandSub {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .brandName {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,9 @@
+html[data-theme='dark'] {
+  --btn-outline-color: #dbe9d8;
+  --btn-outline-border: rgba(223, 233, 217, 0.2);
+  --btn-outline-hover-bg: rgba(223, 233, 217, 0.08);
+  --btn-outline-hover-color: #fff;
+  --btn-light-bg: #edf3e7;
+  --btn-light-color: #14301f;
+  --btn-light-hover-bg: #fff;
+}

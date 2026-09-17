@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink {
+  padding: 11px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--nav-link-color);
+  border-radius: 999px;
+}
+
+.navLink:hover {
+  background: var(--nav-link-hover-bg);
+  color: var(--nav-link-hover-color);
+}
+
+@media (max-width: 980px) {
+  .nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 4%;
+    right: 4%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--nav-popover-bg);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 10px;
+    /*
+     * Full value per theme (--shadow in light, --shadow-elevated in
+     * dark) so no theme selector is needed here. Scoped to this media
+     * query on purpose: the mobile popover is the only place `.nav` has
+     * any shadow at all.
+     */
+    box-shadow: var(--nav-popover-shadow);
+  }
+
+  .open {
+    display: flex;
+  }
+
+  .navLink {
+    text-align: center;
+  }
+
+}

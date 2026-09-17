@@ -1,0 +1,108 @@
+/*
+ * .site-footer's own text is literal white/near-white regardless of
+ * theme (only its background darkens via --site-footer-bg) — so `color`
+ * and the hover states below intentionally use literal #fff, not a
+ * themed token. Matches the source: no dark override ever touches
+ * `.site-footer`'s own `color` property.
+ */
+.siteFooter {
+  background: var(--site-footer-bg);
+  color: #fff;
+  padding: 50px 0 34px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footerBrand img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--logo-plate-bg);
+}
+
+.footerBrand > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brandStrong {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--footer-brand-strong-color);
+}
+
+.brandSpan {
+  font-size: 12px;
+  color: var(--footer-text-soft);
+}
+
+.footerSocial {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.footerSocial a {
+  text-decoration: none;
+  color: var(--footer-link-color);
+  font-size: 13px;
+}
+
+.footerSocial a:hover {
+  color: #fff;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footerLinks a,
+.footerMeta a {
+  text-decoration: none;
+  color: var(--footer-link-color);
+  font-size: 13px;
+}
+
+.footerLinks a:hover,
+.footerMeta a:hover {
+  color: #fff;
+}
+
+.footerMeta p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--footer-text-soft);
+}
+
+@media (max-width: 980px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

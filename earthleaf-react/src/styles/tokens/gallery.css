@@ -1,0 +1,14 @@
+/*
+ * Gallery — photo treatment for the /events grid.
+ *
+ * Two tokens, not one, because the hover state is theme-dependent in a
+ * way a single token can't express: light mode brightens on hover,
+ * dark mode deliberately does not (the source's dark rule outranked its
+ * own :hover rule by specificity, so hovering never brightened a photo
+ * in dark mode). Making that explicit here means Gallery.module.css
+ * carries no theme selector and no specificity trick.
+ */
+:root {
+  --gallery-photo-filter: brightness(1.06);
+  --gallery-photo-filter-hover: brightness(1.1);
+}

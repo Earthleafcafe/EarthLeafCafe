@@ -1,0 +1,4 @@
+html[data-theme='dark'] {
+  --icon-badge-bg: rgba(176, 223, 166, 0.12);
+  --icon-badge-color: #b9e1af;
+}

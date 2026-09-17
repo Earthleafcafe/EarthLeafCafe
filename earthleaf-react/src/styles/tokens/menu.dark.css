@@ -1,0 +1,6 @@
+html[data-theme='dark'] {
+  --section-soft-bg: #0f1612;
+  --menu-card-bg: rgba(18, 26, 21, 0.96);
+  --menu-card-strong-color: #eef6eb;
+  --menu-icon-bg: rgba(176, 223, 166, 0.12);
+}

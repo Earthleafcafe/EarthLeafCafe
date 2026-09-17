@@ -1,0 +1,13 @@
+.section {
+  padding: 90px 0;
+}
+
+.soft {
+  background: var(--section-soft-bg);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 64px 0;
+  }
+}

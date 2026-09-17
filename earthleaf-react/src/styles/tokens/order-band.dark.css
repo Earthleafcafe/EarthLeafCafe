@@ -1,0 +1,4 @@
+html[data-theme='dark'] {
+  --order-band-bg: linear-gradient(110deg, #0d1510, #15281c);
+  --order-band-text: var(--text-body);
+}

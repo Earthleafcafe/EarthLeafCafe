@@ -1,0 +1,17 @@
+/* Minimal reset, ported verbatim from earthleaf.lk/css/styles.css */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  /*
+   * Not in the source — closes the gap docs/CLAUDE.md lists under
+   * "Known gaps to fix, not inherit" (every hash anchor landing under
+   * the sticky header). Added here rather than deferred to phase 14
+   * because the multi-page nav now depends on anchors resolving to a
+   * visible target: #visit and #order are reached from other routes.
+   */
+  scroll-padding-top: var(--header-height);
+}

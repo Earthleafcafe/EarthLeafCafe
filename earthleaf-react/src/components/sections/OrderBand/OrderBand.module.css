@@ -1,0 +1,44 @@
+.orderBand {
+  background: var(--order-band-bg);
+  padding: 58px 0;
+}
+
+.orderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/*
+ * Literal #fff, not a theme token. The source's dark-mode global
+ * h1/h2/h3 override technically wins here too via a specificity
+ * accident (2 type selectors beat this rule's 1), resolving to
+ * #eef4ea — visually indistinguishable from #fff. Simplified
+ * deliberately rather than adding a token to chase an imperceptible
+ * difference nobody designed on purpose.
+ */
+.heading {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.body {
+  color: var(--order-band-text);
+  margin: 0;
+  line-height: 1.6;
+  font-size: calc(16px * var(--text-scale));
+}
+
+@media (max-width: 980px) {
+  .orderInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .orderBand {
+    padding: 44px 0;
+  }
+}

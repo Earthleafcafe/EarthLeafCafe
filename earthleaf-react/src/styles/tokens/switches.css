@@ -1,0 +1,8 @@
+/* Switches — shared pill styling for LanguageSwitch and ThemeSwitch. */
+:root {
+  --pill-switch-bg: var(--cream);
+  --pill-switch-active-bg: var(--forest-dark);
+  --pill-switch-link-color: var(--forest-dark);
+  --pill-switch-link-hover-bg: #fff;
+  --pill-switch-link-hover-color: var(--forest-dark);
+}

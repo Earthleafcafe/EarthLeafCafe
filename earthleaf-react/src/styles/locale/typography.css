@@ -1,0 +1,45 @@
+/*
+ * Locale — Sinhala typography overrides (docs/REACT-MIGRATION-PLAN.md §3.2
+ * in earthleaf.lk). Collapses the source's ~30 `.lang-si …` selectors down
+ * to font-stack, a single text-scale multiplier, letter-spacing, and
+ * per-level line-heights — components read these via var(), never a
+ * `[data-locale='si']` selector of their own.
+ *
+ * --text-scale drives font-size via `calc(<base> * var(--text-scale))` in
+ * styles/typography.css and in each section's own CSS module. It's a
+ * close approximation of the source's hand-picked Sinhala sizes (within
+ * ~1-6%), traded for one knob instead of a dozen hardcoded overrides.
+ *
+ * NOT covered here (deferred as component-level exceptions — see the
+ * component's own module when it's built): the source's flat 11px
+ * override for the smallest text tier (.brand-sub, .chips span,
+ * .floating-card span, .fine, .footer-brand span, .footer-links a,
+ * .footer-meta a, .footer-meta p) doesn't scale proportionally from a
+ * single shared base size in English either (12px vs 13px), so it isn't
+ * a clean fit for --text-scale and is left for each component to set
+ * directly under `:global(html[data-locale='si'])`.
+ *
+ * Prose-paragraph convention (SectionHead.sub and its counterparts in
+ * Hero/Promise/Video/OrderBand/Visit/Menu built in later phases): the
+ * source's `.lang-si .lead, .section-head p, .section-lead, …{font-size:
+ * .92em; line-height:1.52}` group is a genuine EXACT match for
+ * `calc(<base> * var(--text-scale))` on font-size (.92em == 0.92), so use
+ * that. line-height is NOT — the source flattens ~8 different English
+ * line-heights (1.55-1.75) to one literal 1.52 for Sinhala, which isn't
+ * proportional to any of them. Rather than invent a token per element for
+ * a few-percent visual difference, these components keep their own
+ * English line-height for both locales. Documented simplification, not a
+ * dropped requirement.
+ */
+html[data-locale='si'] {
+  --font-display: 'Noto Sans Sinhala', 'DM Sans', sans-serif;
+  --font-body: 'Noto Sans Sinhala', 'DM Sans', sans-serif;
+  --text-scale: 0.92;
+  --eyebrow-letter-spacing: 0.04em;
+  --h1-line-height: 0.94;
+  --h2-line-height: 1;
+  --h3-line-height: 1.08;
+  /* The source's flat 11px for its smallest text tier — not proportional
+     to --text-scale, so it is its own token rather than a calc(). */
+  --chip-font-size: 11px;
+}

@@ -1,0 +1,5 @@
+/* Badges — shared round icon badge used by Promise (numbered) and Visit (kicker). */
+:root {
+  --icon-badge-bg: #fff;
+  --icon-badge-color: var(--leaf);
+}

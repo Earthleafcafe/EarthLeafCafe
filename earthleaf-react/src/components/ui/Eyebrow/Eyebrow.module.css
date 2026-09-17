@@ -1,0 +1,12 @@
+.eyebrow {
+  margin: 0 0 13px;
+  text-transform: uppercase;
+  letter-spacing: var(--eyebrow-letter-spacing);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--leaf);
+}
+
+.light {
+  color: var(--eyebrow-light-color);
+}
